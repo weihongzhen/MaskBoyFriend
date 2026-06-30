@@ -59,10 +59,11 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Maskfriend.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Maskfriend.data.unityweb",
-        frameworkUrl: buildUrl + "/Maskfriend.framework.js.unityweb",
-        codeUrl: buildUrl + "/Maskfriend.wasm.unityweb",
+        dataUrl: buildUrl + "/Maskfriend.data",
+        frameworkUrl: buildUrl + "/Maskfriend.framework.js",
+        codeUrl: buildUrl + "/Maskfriend.wasm",
         streamingAssetsUrl: "StreamingAssets",
+        disableStreamingDownload: true,
         companyName: "DefaultCompany",
         productName: "假面男友",
         productVersion: "0.1",
