@@ -1,10 +1,5 @@
 ﻿name = "maskfriend"
-type = "static"
+type = "pages"
 
-[site]
-bucket = "./"
-entry-point = "workers-site"
-
-[build]
-command = ""
-publish = "."
+[pages]
+build_output_dir = "."
