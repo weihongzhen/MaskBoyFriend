@@ -26,6 +26,17 @@
     </div>
   </div>
   <script>
+    (function () {
+      var originalFetch = window.fetch;
+      window.fetch = function (url, options) {
+        if (typeof url === 'string' && (url.endsWith('.wasm') || url.endsWith('.data') || url.endsWith('.framework.js'))) {
+          options = options || {};
+          options.headers = options.headers || {};
+          options.headers['Accept-Encoding'] = 'identity';
+        }
+        return originalFetch(url, options);
+      };
+    })();
 
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
