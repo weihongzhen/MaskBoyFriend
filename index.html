@@ -26,6 +26,15 @@
     </div>
   </div>
   <script>
+    var originalFetch = window.fetch;
+    window.fetch = function (resource, options) {
+      if (typeof resource === 'string' && (resource.endsWith('.wasm') || resource.endsWith('.data') || resource.endsWith('.framework.js'))) {
+        options = options || {};
+        options.headers = options.headers || {};
+        options.headers['Accept-Encoding'] = 'identity';
+      }
+      return originalFetch(resource, options);
+    };
 
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
@@ -61,9 +70,9 @@
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/Maskfriend.loader.js";
     var config = {
-      dataUrl: buildUrl + "/Maskfriend.data.unityweb",
-      frameworkUrl: buildUrl + "/Maskfriend.framework.js.unityweb",
-      codeUrl: buildUrl + "/Maskfriend.wasm.unityweb",
+      dataUrl: buildUrl + "/Maskfriend.data",
+      frameworkUrl: buildUrl + "/Maskfriend.framework.js",
+      codeUrl: buildUrl + "/Maskfriend.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "假面男友",
