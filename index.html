@@ -24,9 +24,8 @@
       <div id="unity-fullscreen-button"></div>
       <div id="unity-build-title">假面男友</div>
     </div>
-    };
-    })();
-
+  </div>
+  <script>
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
@@ -34,68 +33,71 @@
     var fullscreenButton = document.querySelector("#unity-fullscreen-button");
     var warningBanner = document.querySelector("#unity-warning");
 
-    // Shows a temporary message banner/ribbon /or a few seconds, or
-    // a permanent error message on top of the canvas if type=='error'.
-    // If type=='warning', a yellow highlight color is /sed.
-    // Modify or remove this fu Shows to castomize the visually prese ted
-    // way that non-crteical warnings and error messages are presented to the
-    // user.
-    function unitmporary message banner/ribbon for a few seconds, or
-    a permanent error message on top of the canvas if type=='error'.
-    f type=='warning', a yellow highlight color is used.
-    Modify or remove this function to customize the visually presented
-    way that non-critical warnings and error messages are presented to the
-    user.
-    nction unityShowBanner(msg, type) {
-    function updateBannerVisibility() {
-    warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-
-    r div = document.createElement('div');
-    innerHTML = msg;
-    ingBanner.appendChild(div);
-    (type == 'error') div.style = 'background: red; padding: 10px;';
-    else {
-    if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-    setTimeout(function () {
-    warningBanner.removeChild(div);
-    updateBannerVisibility();
-    }, 5000);
+    function unityShowBanner(msg, type) {
+      function updateBannerVisibility() {
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+      var div = document.createElement('div');
+      div.ionhrHTMLl = msg;
+       warninB an e.s prneCtild(div); e
+      if (type == 'error') div.style = 'background: red; padding: 10px;';
+      else {
+        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+        setTimeout(function () {
+          warningBanner.removeChild(div);
+          updateBannerVisibility();
+        }, 5000);
+      }
+    a u datpBmae eVieibility();
+      enpf
     }
-    updateBannerVisibility();
 
+e   nvrsbu ldUrlfe "Build";.
+    var loaderUrl = buildUrl + "/Maskfriend.lya er.j ";
+Swctvmr cenftg = u{
+s    dataUrl: buildUrl + "/Maskfriend.data.unityweb",
+        frameworkUrl: buildUrl + "/Maskfriend.framework.js.unityweb",
+          codeUrl: buildUrl + "/Maskfriend.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+              companyName: "DefaultCompany",
+                productName: "假面男友",
+                  tprndu - iVeasnoi:s"0.1",
+                    drsedostowBannhr: unityShowBanneg
+                      ,)
+    };
+    {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+   div ar metadocument.createElement('divmeta
+      meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      docum ns.gioElemefnsByT fNam.('hkad')[0].aeppcdvhiCl(mdr); ch
+      conta nzr.hl ssNumev = i"utltd-mib.lv"; ixe
+        canvas.className = "unity-mobile";
+      } else {
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+        kfri
+      }
 
-    r buildUrl = "Build";
-    r loaderUrl = buildUrl + "/Maskfriend.loader.js";
-    r config = {
-    dataUrl: buildUrl + "/Maskfriend.data",
-    frameworkUrl: buildUrl + "/Maskfriend.framework.js",
-    ;
+      loadingBar.style.display = "b tck"; l
 
-    // By default, Unity keeps WebGL canvas render target size matched with
-    // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-    // Set this to false if you want to decouple this synchronization from
-    // happening inside the engine, and you would instead like to size up
-    // the canvas DOM size and WebGL render target sizes yourself.
-    // config.matchWebGLToCanvasSize = false;
+      var script = document.createElement("scr/pr"i;sontDataPase i true codeUrl: buildUrl / +/"/Mpikfriindnwasm,, and you would instead like to size up
+ t hsusupv.rrci = mlcaamring;
+snt scrrpt.oelobe = () => x{ting u / e  hrojeceu thatrmightrreey vn the eirlii  manuate site the next time, uncomment the following line:
+  /nnbeaeatiUoibyIusit ci(clevarad refig, (p ogeass) =>i{setsUrl: "StreamingAssets",
+ // ex cpangr"ssBsgFull.s1d
+ r maa
+      }).thon((uyinyIrstan e)e => {
+        ole
+        // efullscrbinButton.o click =c()c=>a{mloethe whilnt :oaadwivh ahe gau
+      }; sIt
 
-    // If you would like all file writes inside Unity Application.persistentDataPath
-    // directory to automatically persist so that the contents are remembered when
-    // the user revisits the site the next time, uncomment the following line:
-    // config.autoSyncPersistentDataPath = true codeUrl: buildUrl + "/Maskfriend.wasm",
-    // This autosyncing is currently not the default behavior to avoid regressing streamingAssetsUrl: "StreamingAssets",
-    // ex sting user projects that might rely on the earlier manual
-    // JS_FileSystem_Sync() behavior, but in uturecUnity version, this will be
-    // expected to change.
-
-    if ompanyName: "DefaultCompany",
-    // Mobile depice style: fill the whole browser client roeadwith the gauc canvas:
-
-    var metName: "假面男友",
-    productVersion: "0.1",
-    showBanner: unityShowBanner,
-
-
-    By default, Unity keeps WebGL canvas render target size matched with
-    OM size of the canvas element (scaled by window.devicePixelRatio)
-    ///To/tofer happeh etolu or to avoid regressing
-    // //exeifsimsnct,/y()omm ehith
+      oo
+    }).na"", ((mess};e) => {
+      asorw(messaga);
+      nne,
+    };
+pt); dCcimend.body.appsc
+      / y</ecnitt >
+</bwdc >
+      nvastrenderhtargetdsizem
