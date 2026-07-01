@@ -1,0 +1,10 @@
+﻿name = "maskfriend"
+type = "static"
+
+[site]
+bucket = "./"
+entry-point = "workers-site"
+
+[build]
+command = ""
+publish = "."
